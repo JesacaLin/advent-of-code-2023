@@ -18,7 +18,7 @@ public class AdventOfCodeDay1 {
         Scanner scanner = new Scanner(in);
         //input: a string
         //output: sum of all the calibration values
-
+        //PART ONE:
         //create counter to add all calibration values;
         //somehow split the string into characters, stored in an array.
         //create variables to hold first int and last int
@@ -30,6 +30,7 @@ public class AdventOfCodeDay1 {
             //set current calibration value to first in and last int
                 //convert current calibration value to string then to int
             //add to total int
+
         int calibrationTotal = 0;
         while (scanner.hasNextLine()) {
             String currentLine = scanner.nextLine();
@@ -50,7 +51,7 @@ public class AdventOfCodeDay1 {
             }
             int currentCalibrationTotal = Integer.parseInt(String.valueOf(first) + String.valueOf(last));
             calibrationTotal += currentCalibrationTotal;
-            
+
             System.out.println(calibrationTotal);
         }
         scanner.close();
