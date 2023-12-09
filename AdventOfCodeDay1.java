@@ -11,7 +11,7 @@ public class AdventOfCodeDay1 {
         prop.load(new FileInputStream(".env"));
         String sessionCookie = prop.getProperty("SESSION_COOKIE");
 
-        URL url = new URL("https://adventofcode.com/2023/day/1/input");
+        URL url = new URL(prop.getProperty("DAY_ONE_INPUT_URL"));
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestProperty("Cookie", "session=" + sessionCookie);
         InputStream in = connection.getInputStream();
